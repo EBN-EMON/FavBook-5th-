@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FavBook — Online Book Shop</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--Bootstarp-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+
+</head>
+
+<body class="bg-[url('/images/home_bg.jpg')] min-h-screen h-screen bg-cover bg-center text-gray-800 font-sans">
+  <header class="bg-white text-gray-500 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <img src="./images/favbook.png" alt="" class="w-24">
+        </a>
+
+        <div class="hidden md:flex items-center gap-6">
+          <a class="text-sm hover:text-amber-600" href="#home">Home</a>
+          <a class="text-sm hover:text-amber-600" href="#products">Products</a>
+          <a class="text-sm hover:text-amber-600" href="#reviews">Reviews</a>
+          <a class="text-sm hover:text-amber-600" href="#contact">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Slide -->
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/agun.jpg" class="d-block h-30 w-30 mx-auto" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/putul.jpg" class="d-block h-30 w-30 mx-auto" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/mzd998.jpg" class="d-block h-30 w-30 mx-auto" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Products  -->
+    <section id="products" class="py-4">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <h3 class="text-2xl font-semibold">Products</h3>
+        <!--products search & sort -->
+        <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center">
+          <input id="search-input" type="search" placeholder="Search products..."
+            class="px-3 py-2 rounded border w-full md:w-64 focus:outline-none" />
+          <select id="sort-select" class="px-3 py-2 rounded border">
+            <option value="default">Sort</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating-asc">Rating: Low → High</option>
+            <option value="rating-desc">Rating: High → Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="products-grid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- JS file theke products gulo injects hbe eikhane-->
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-10 border-t mt-10">
+      <h3 class="text-2xl font-semibold mb-4">Customer Reviews</h3>
+      <form id="review-form" class="space-y-4 mb-6">
+        <input id="reviewer-name" type="text" placeholder="Your name"
+          class="w-full px-3 py-2 border rounded" required />
+        <textarea id="review-text" placeholder="Write your review..."
+          class="w-full px-3 py-2 border rounded" required></textarea>
+        <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded">Submit Review</button>
+      </form>
+
+      <div id="reviews-list" class="space-y-4">
+        <!-- Reviews gulo eikhane show krbe -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-amber-100 border-t mt-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row justify-between gap-4">
+        <div>
+          <div class="font-semibold">FavBook</div>
+          <div class="text-sm text-gray-600 mt-2">Contact: favbook@example.com</div>
+        </div>
+        <div class="text-sm text-gray-600">
+          © <span id="year"></span> FavBook. All rights reserved.
+        </div>
+        <div class="flex gap-3">
+          <a href="#home" class="text-sm hover:text-amber-600">Home</a>
+          <a href="#products" class="text-sm hover:text-amber-600">Products</a>
+          <a href="#contact" class="text-sm hover:text-amber-600">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
