@@ -1,18 +1,18 @@
 
 //JS array objects for products info store
 const products = [
-  { id: 'book-1', title: 'জালালউদ্দিন রুমি — রবিকুল রনি', price: 350, rating: 4.7, img: './images/jalauddin.jpeg' },
-  { id: 'book-2', title: 'যদি ও সন্ধ্যা — হুমায়ুন আহমেদ', price: 290, rating: 4.4, img: './images/jodiosondha.jpeg' },
-  { id: 'book-3', title: 'আগুন ডানার পাখি', price: 420, rating: 4.9, img: './images/agun.jpg' },
-  { id: 'book-4', title: 'আমাদের শহরের মেয়ে', price: 220, rating: 4.1, img: './images/amader_sohorer.png' },
-  { id: 'book-5', title: 'আপন কথা', price: 350, rating: 4.7, img: './images/apon_ktha.jpg' },
-  { id: 'book-6', title: 'দূরের সবুজ বনভুমি', price: 250, rating: 4.1, img: './images/durer.png' },
-  { id: 'book-7', title: 'এইসব দিনরাত্রি', price: 520, rating: 4.1, img: './images/eisob_dinrat.jpg' },
-  { id: 'book-8', title: 'জয়বাবা ফেলুনাথ', price: 225, rating: 4.1, img: './images/jombaba.jpg' },
-  { id: 'book-9', title: 'নীড়হারা পাখি', price: 255, rating: 4.1, img: './images/nirhara_pakhi.jpg' },
-  { id: 'book-10', title: 'অম্রতায়ন', price: 555, rating: 4.1, img: './images/omritoyayon.jpeg' },
-  { id: 'book-11', title: 'পুতুলনাচের ইতিকথা', price: 250, rating: 4.1, img: './images/putul.jpg' },
-  { id: 'book-12', title: 'শ্রেষ্ঠ গল্প', price: 550, rating: 4.1, img: './images/shersto_golpo.jpeg' }
+  { id: 'book-1', title: 'জালালউদ্দিন রুমি — রবিকুল রনি', price: 350, rating: 4.7, img: '/images/jalauddin.jpeg' },
+  { id: 'book-2', title: 'যদি ও সন্ধ্যা — হুমায়ুন আহমেদ', price: 290, rating: 4.4, img: '/images/jodiosondha.jpeg' },
+  { id: 'book-3', title: 'আগুন ডানার পাখি', price: 420, rating: 4.9, img: '/images/agun.jpg' },
+  { id: 'book-4', title: 'আমাদের শহরের মেয়ে', price: 220, rating: 4.1, img: '/images/amader_sohorer.png' },
+  { id: 'book-5', title: 'আপন কথা', price: 350, rating: 4.7, img: '/images/apon_ktha.jpg' },
+  { id: 'book-6', title: 'দূরের সবুজ বনভুমি', price: 250, rating: 4.1, img: '/images/durer.png' },
+  { id: 'book-7', title: 'এইসব দিনরাত্রি', price: 520, rating: 4.1, img: '/images/eisob_dinrat.jpg' },
+  { id: 'book-8', title: 'জয়বাবা ফেলুনাথ', price: 225, rating: 4.1, img: '/images/jombaba.jpg' },
+  { id: 'book-9', title: 'নীড়হারা পাখি', price: 255, rating: 4.1, img: '/images/nirhara_pakhi.jpg' },
+  { id: 'book-10', title: 'অম্রতায়ন', price: 555, rating: 4.1, img: '/images/omritoyayon.jpeg' },
+  { id: 'book-11', title: 'পুতুলনাচের ইতিকথা', price: 250, rating: 4.1, img: '/images/putul.jpg' },
+  { id: 'book-12', title: 'শ্রেষ্ঠ গল্প', price: 550, rating: 4.1, img: '/images/shersto_golpo.jpeg' }
 ];
 
 // using DOM------like a bridge between html and JS
@@ -85,6 +85,7 @@ reviewForm.addEventListener('submit', e => {
 
   reviewForm.reset();
 });
+
 
 
 
